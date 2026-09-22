@@ -1,113 +1,243 @@
 <!DOCTYPE html>
-<html lang="en"
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mikaella Creatives</title>
-<style>
-body {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikaella Creatives</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <div class="image-container"
-    <img src=pic.jpg" alt="Creative Profile 1">
-    <img src=pic.jpg" alt="Creative Profile 2">
-    <img src=pic.jpg" alt="Creative Profile 3">
-    </div>
-    
-    <p class "desvcription">
-        Step into the world where every detail is a marterpiece. Mika's Creative Collections offers a uniqueblend of modern innovation and timeless elegance.
-</p>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d1dfd2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
 
-<a href="#about" class="btn-cta">LEARN MORE</a>
-</div>
+        /* Top Header */
+        header {
+            width: 100%;
+            background-color: #6a7f71;
+            padding: 15px 0;
+            text-align: center;
+        }
 
-<!==ABOUT PAGE==>
-<div class="card" id="about">
-    <h2>ABOUT ME</h2>
-    <p class="tagline"> Passionate Design & Frontend Development</p>
-    <p class="description">
-        Welcome to Mika's Creatives where we learn to code and focus on building modern designs.
-        <p/> 
+        .brand-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            background-color: #7b8f81;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 12px 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Main Content Container */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 40px 20px;
+            gap: 30px;
+        }
+
+        /* Central Cards */
+        .card {
+            background-color: #e5eee6;
+            border-radius: 16px;
+            padding: 45px 30px;
+            max-width: 750px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            color: #3b4d40;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .tagline {
+            color: #66776b;
+            font-style: italic;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .image-container img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #7b8f81;
+        }
+
+        .description {
+            color: #55665a;
+            font-size: 0.95rem;
+            max-width: 550px;
+            margin: 0 auto 25px auto;
+            line-height: 1.5;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #6a7f71;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            color: #3b4d40;
+        }
+
+        .contact-info a {
+            color: #4b6251;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #7b8f81;
+            color: #e5eee6;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="brand-container">
+            <img src="logo.jpg" alt="Logo" class="logo-icon">
+            <h1>Mikaella's Creatives</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Home Card -->
+        <div class="card" id="home">
+            <h2>Experience the Creative</h2>
+            <p class="tagline">Crafting beauty through intentional design</p>
+            
+            <div class="image-container">
+                <img src="profile 1.jpg" alt="Creative Profile 1">
+                <img src="profile 2.jpg" alt="Creative Profile 2">
+                <img src="profile 3.jpg" alt="Creative Profile 3">
+            </div>
+
+            <p class="description">
+                Step into a world where every detail is a masterpiece. Mikaella's Creative Collections offers a unique blend of modern innovation and timeless elegance.
+            </p>
+            <a href="#about" class="btn-cta">Learn More</a>
         </div>
 
-        <1==GALLERY PAGE==>
+        <!-- About Card -->
+        <div class="card" id="about">
+            <h2>About Me</h2>
+            <p class="tagline">Passionate Design & Frontend Development</p>
+            <p class="description">Welcome to Mikaella's Creatives where we learn to code and focus on building modern designs.</p>
+        </div>
+
+        <!-- Gallery Card -->
         <div class="card" id="gallery">
-            <h2>GALLERY<h2>
-                <p class=tagline>A showcase of recent work and creative concepts</p>
-                <div class="description">
-                    Explore a selection of creative projects including UI/UX mockups.
+            <h2>Gallery</h2>
+            <p class="tagline">A showcase of recent work and creative concepts</p>
+            <p class="description">Explore a selection of creative projects including UI/UX mockups.</p>
+        </div>
 
-    
+        <!-- Contact Card -->
+        <div class="card" id="contact">
+            <h2>Get In Touch</h2>
+            <p class="tagline">Let us work together on your next project.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:mikaellabacala775@gmail.com">mikaellabacala775@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:09611793940">09611793940</a></p>
+            </div>
+        </div>
+    </main>
 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Mikaella's Creatives. All Rights Reserved.</p>
+    </footer>
 
-                    <!==CONTACT PAGE==>
-                     <div class="card" id="gallery">
-            <h2>GET IN TOUCH<h2>
-                <p class=tagline>Let us work together pn your next project.</p>
-                <div class="contact-info">
-                    <p><strong>Email:</strong><a href="mailto:mikaellabacala775@gmail.com">mikaellabacala775@gmail.com</a></p>
-                     <p><strong>Phone:</strong><a href="tel=:09611793940">09611793940</a></p>
-                     </div>
-                     </div>
-                     
-                     </main>
-
-
-    box box-sizing: border-box;
-    <margin: 0;
-    padding: 0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: #d1dfd2;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-align-items:center;
-}
-
-/*Top Header*/
-{
-width: 100%;
-background-color: #6a7f71;
-padding: 15px 0;
-text-align: center;
-color: #ffffff;
-}
-
-.brand container {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
-}
-
-. logo-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    ]border: 2px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* Navigation Bar*/
-nav{
-    width: 100%;
-    background-color: <div id="7b8f81"></div>;
-    <box-shadow>: 0 2px 4px rgba (0,0,0,0.1);
-}
-
-nav ul {
-    list-style: none;
-display: flex;
-justify-content: center;
-gap 40px;
-padding: 12px 0;
-}
-    </body>
-    </html>
-
-
-
-
-
+</body>
+</html>
